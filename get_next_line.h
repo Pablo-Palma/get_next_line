@@ -6,7 +6,7 @@
 /*   By: pabpalma <pabpalma>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 10:36:07 by pabpalma          #+#    #+#             */
-/*   Updated: 2023/10/02 12:00:52 by pabpalma         ###   ########.fr       */
+/*   Updated: 2023/10/04 17:35:23 by pabpalma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,10 @@
 # include <stddef.h>
 # include <fcntl.h>
 # include <stdlib.h>
-# include <stdbool.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
 # endif
-
-typedef struct s_gnl
-{
-	int				fd;
-	char			*reminder;
-	struct s_gnl	*next;
-}	t_gnl;
 
 //get_next_line functions
 char	*get_next_line(int fd);
@@ -40,6 +32,5 @@ char	*ft_strdup(const char *src);
 char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
-void	*ft_memmove(void *dst, const void *src, size_t len);
 
 #endif

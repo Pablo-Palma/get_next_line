@@ -6,7 +6,7 @@
 /*   By: pabpalma <pabpalma>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 14:14:34 by pabpalma          #+#    #+#             */
-/*   Updated: 2023/10/03 19:18:34 by pabpalma         ###   ########.fr       */
+/*   Updated: 2023/10/04 16:46:30 by pabpalma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,9 @@ char	*return_remaining_line(char **buffer_res)
 
 	if (buffer_res && *buffer_res)
 	{
+		temp = check_reminder(buffer_res);
+		if (temp)
+			return (temp);
 		temp = ft_strdup(*buffer_res);
 		free(*buffer_res);
 		*buffer_res = NULL;
@@ -87,12 +90,6 @@ char	*get_next_line(int fd)
 		if (temp)
 			return (temp);
 	}
-	if (buffer_res && *buffer_res)
-	{
-		temp = check_reminder(&buffer_res);
-		if (temp)
-			return (temp);
-	}
 	return (return_remaining_line(&buffer_res));
 }
 /*
@@ -101,7 +98,7 @@ int	main(void)
 	int		fd;
 	char	*line;
 
-	fd = open("multiple_nlx5.txt", O_RDONLY);
+	fd = open("gnl.txt", O_RDONLY);
 	if (fd == -1)
 	{
 		perror("Error al abrir el archivo");
