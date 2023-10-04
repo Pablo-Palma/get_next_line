@@ -19,19 +19,10 @@
 
 - **Cambios en el Archivo:** Si el archivo apuntado por el fd cambia desde la última llamada (y no se ha llegado al final del archivo mediante `read()`), el comportamiento de GNL es indeterminado.
 
-- **Archivos Binarios:** Aunque GNL no está diseñado para archivos binarios, los usuarios avanzados pueden implementar soluciones para sortear este desafío.
-
 📋 **Directrices de Compilación**
 
 - Puedes compilar con o sin el flag `-D BUFFER_SIZE`, según lo necesites. El valor por defecto es flexible según tus preferencias.
 
-❌ **Prohibiciones**
-
-- No está permitido usar `libft` en este proyecto.
-  
-- Uso de `lseek` está prohibido.
-  
-- Se prohíbe estrictamente la utilización de variables globales.
 
 ---
 
@@ -44,5 +35,3 @@
 - **Email:** pablopalmappr@gmail.com
 
 ---
-
-Espero que esta descripción concisa y profesional sea adecuada para tu proyecto `get_next_line`. ¡Buena suerte!
