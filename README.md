@@ -1,5 +1,5 @@
 
-# Printf
+# Get Next Line
 
 
 📖 **Bienvenido a Get Next Line (GNL)**
